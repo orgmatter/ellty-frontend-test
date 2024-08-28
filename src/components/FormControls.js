@@ -5,27 +5,25 @@ function ControlList(props) {
     const { controlObj, indexKey, isChecked } = props;
 
     return (
-        <div className="content-cover-flex-row" key={indexKey}>
+        <label className="content-cover-flex-row" htmlFor={`single-chkbox-${indexKey}`} key={indexKey}>
             <div className="content-cover-flex-item">
                 <span className="text-sp">{controlObj.chkboxName}</span>
             </div>
             <div className="content-cover-flex-item">
-                <label className="chkbox-label" htmlFor={`single-chkbox-${indexKey}`}>
-                    <input 
-                        className="form-chkbox" 
-                        id={`single-chkbox-${indexKey}`} 
-                        type="checkbox" 
-                        value={controlObj.chkboxVal}
-                        checked={isChecked? isChecked : null}
-                    />
-                    <span className="chkbox-mark">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M9 16.2l-3.5-3.5L4 14.3l5 5L20 8.3l-1.4-1.4z"/>
-                        </svg>
-                    </span>
-                </label>
+                <input 
+                    className="form-chkbox" 
+                    id={`single-chkbox-${indexKey}`} 
+                    type="checkbox" 
+                    value={controlObj.chkboxVal}
+                    checked={isChecked? isChecked : null}
+                />
+                <span className="chkbox-mark">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M9 16.2l-3.5-3.5L4 14.3l5 5L20 8.3l-1.4-1.4z"/>
+                    </svg>
+                </span>
             </div>
-        </div>
+        </label>
     )
 }
 
@@ -61,26 +59,24 @@ export default function FormControls() {
             <div className="form-control-component-item">
                 <div className="form-control-cover-flex">
                     <div className="form-control-cover-item">
-                        <div className="header-cover-flex">
+                        <label className="header-cover-flex" htmlFor="all-chkbox">
                             <div className="header-cover-item">
                                 <span className="text-sp">All pages</span>
                             </div>
                             <div className="header-cover-item">
-                                <label className="chkbox-label" htmlFor="all-chkbox">
-                                    <input 
-                                        className="form-chkbox" 
-                                        id="all-chkbox" 
-                                        type="checkbox"
-                                        onChange={handleAllCheckBoxChange}
-                                    />
-                                    <span className="chkbox-mark">
-                                        <svg viewBox="0 0 24 24">
-                                            <path d="M9 16.2l-3.5-3.5L4 14.3l5 5L20 8.3l-1.4-1.4z"/>
-                                        </svg>
-                                    </span>
-                                </label>
+                                <input 
+                                    className="form-chkbox" 
+                                    id="all-chkbox" 
+                                    type="checkbox"
+                                    onChange={handleAllCheckBoxChange}
+                                />
+                                <span className="chkbox-mark">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M9 16.2l-3.5-3.5L4 14.3l5 5L20 8.3l-1.4-1.4z"/>
+                                    </svg>
+                                </span>
                             </div>
-                        </div>
+                        </label>
                         <div className="content-cover-flex-col">
                             {
                                 controlListArr.map((controlObj, index) => {
