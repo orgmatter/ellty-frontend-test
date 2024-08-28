@@ -1,0 +1,213 @@
+body {
+  margin: auto;
+  border: 1px solid blue;
+  font-family: "Montserrat", sans-serif;
+}
+.app-cover {
+  width: 100%;
+
+  .form-control-component-flex {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    
+    .form-control-component-item {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding-top: 85px;
+
+      .form-control-cover-flex {
+        width: 370px;
+        height: 52%;
+        display: flex;
+        justify-content: center;
+        border:  1px solid rgba(238, 238, 238, 1);
+        border-radius: 6px;
+        box-shadow: 0px 8px 15px 0px rgba(20, 20, 20, 0.12), 0px 0px 4px 0px rgba(20, 20, 20, 0.10);
+
+        .form-control-cover-item {
+          width: 92%;
+          padding: 10px;
+
+          .header-cover-flex {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 11px 0px 15px 0px;
+            border-bottom: 0.7px solid rgba(205, 205, 205, 1);
+
+            .header-cover-item {
+
+              &:first-child {
+
+                .text-sp {
+                  font-size: 14px;
+                  color: rgba(31, 33, 40, 1);
+                  font-weight: 400;
+                }
+              }
+              &:last-child {
+
+                .chkbox-label {
+                  display: inline-block;
+                  position: relative;
+                  cursor: pointer;
+
+                  .form-chkbox {
+                    opacity: 0;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 0;
+                    width: 0;
+
+                    &:checked + .chkbox-mark {
+                      background-color: rgba(80, 135, 248, 1);
+                    }
+
+                    &:checked + .chkbox-mark svg {
+                      display: inline-block;
+                      fill: rgba(255, 255, 255, 1);
+                    }
+                  }
+                  .chkbox-mark {
+                    width: 23px;
+                    height: 23px;
+                    border-radius: 6px;
+                    border: 1px solid rgba(205, 205, 205, 0.8);
+                    display: inline-block;
+                    position: relative;
+
+                    svg {
+                      display: none;
+                      position: absolute;
+                      top: 50%;
+                      left: 50%;
+                      transform: translate(-50%, -50%);
+                      width: 16px;
+                      height: 16px;
+                    }
+                  }
+
+                  &:hover .chkbox-mark svg {
+                    display: inline-block;
+                    fill: rgba(227, 227, 227, 1);
+                  }
+
+                  &:hover .form-chkbox:checked + .chkbox-mark {
+                    background-color: rgba(80, 135, 248, 1);
+                  }
+                }
+              }
+            }
+          }
+          .content-cover-flex-col {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            border-bottom: 0.7px solid rgba(205, 205, 205, 1);
+
+            .content-cover-flex-row {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 15px 0px 15px 0px;
+
+              .content-cover-flex-item {
+                
+                &:first-child {
+
+                  .text-sp {
+                    font-size: 14px;
+                    color: rgba(31, 33, 40, 1);
+                    font-weight: 400;
+                  }
+                }
+                &:last-child {
+  
+                  .chkbox-label {
+                    display: inline-block;
+                    position: relative;
+                    cursor: pointer;
+  
+                    .form-chkbox {
+                      opacity: 0;
+                      position: absolute;
+                      left: 0;
+                      top: 0;
+                      height: 0;
+                      width: 0;
+  
+                      &:checked + .chkbox-mark {
+                        background-color: rgba(80, 135, 248, 1);
+                      }
+  
+                      &:checked + .chkbox-mark svg {
+                        display: inline-block;
+                        fill: rgba(255, 255, 255, 1);
+                      }
+                    }
+                    .chkbox-mark {
+                      width: 23px;
+                      height: 23px;
+                      border-radius: 6px;
+                      border: 1px solid rgba(205, 205, 205, 0.8);
+                      display: inline-block;
+                      position: relative;
+  
+                      svg {
+                        display: none;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 16px;
+                        height: 16px;
+                      }
+                    }
+  
+                    &:hover .chkbox-mark svg {
+                      display: inline-block;
+                      fill: rgba(227, 227, 227, 1);
+                    }
+  
+                    &:hover .form-chkbox:checked + .chkbox-mark {
+                      background-color: rgba(80, 135, 248, 1);
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .footer-cover-flex {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-top: 15px;
+            padding-bottom: 15px;
+
+            .footer-cover-item {
+              width: 100%;
+
+              .form-btn {
+                width: 100%;
+                border: none;
+                padding: 10px 20px 10px 20px;
+                font-size: 14px;
+                font-weight: 400;
+                color: rgba(31, 33, 40, 1);
+                background-color: rgba(255, 206, 34, 1);
+                border-radius: 4px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
